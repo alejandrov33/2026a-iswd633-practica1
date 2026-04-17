@@ -6,10 +6,13 @@ docker exec <nombre contenedor> <comando> <argumentos opcionales>
 ```
 # COMPLETAR
 ### ¿Para qué se usa el comando ls?
+Se utiliza para listar los archivos y directorios dentro de una ruta específica en el sistema de archivos del contenedor. Por defecto, si no se especifica ruta, lista el contenido del directorio actual (WORKDIR).
+
 ### ¿Para qué sirve el argumento -l junto al comando ls?
+Activa el formato de listado largo (long format). Muestra información técnica detallada: permisos de archivos (rwx), número de enlaces, propietario, grupo, tamaño en bytes y la fecha de última modificación.
+
 ### Usar el contenedor de jenkins creado previamente y ejecutar el comando ls con el argumento -l
-# COMPLETAR
-# COLOCAR UNA CAPTURA DE PANTALLA
+<img width="917" height="636" alt="Captura de pantalla 2026-04-17 a la(s) 2 23 25 p  m" src="https://github.com/user-attachments/assets/8d0488cb-1f89-4f0e-93b5-a6d3a716d24b" />
 
 ### Para ejecutar un shell interactivo en un contenedor de Docker especificado.
 El comando **docker exec** te permite acceder a la sesión shell de un contenedor en ejecución, estarás dentro del contenedor y podrás ejecutar comandos como si estuvieras en una terminal normal. 
@@ -48,7 +51,7 @@ Ejecutar
 ```
 whoami
 ```
-# COLOCAR UNA CAPTURA DE PANTALLA
+<img width="917" height="636" alt="Captura de pantalla 2026-04-17 a la(s) 2 33 34 p  m" src="https://github.com/user-attachments/assets/6be982d9-5a42-49c5-a953-82957e6e1bdb" />
 
 **Si se visualiza el mensaje command not found, considerar**
 El problema se debe a que no se ha asignado un terminal de salida al contenedor al ejecutar el comando. Cuando usas docker exec -i jenkins-server /bin/bash en Windows, el comando se ejecuta pero no hay un terminal asignado para mostrar la salida del comando.
@@ -68,11 +71,12 @@ docker exec -it <nombre contenedor> <programa o comando>
 
 ### Ahora puedes acceder al contenedor de jenkins y obtener la contraseña ubicada en /var/jenkins_home/secrets/initialAdminPassword
 
-# COMPLETAR
+<img width="709" height="497" alt="Captura de pantalla 2026-04-17 a la(s) 2 37 32 p  m" src="https://github.com/user-attachments/assets/f5601083-8d4e-429f-ad94-28e82d9091d6" />
 
 ### Colocar una captura de pantalla de la ventana que aparece después de colocar la contraseña.
 
 **Para este punto no es necesario continuar con la instalación de Jenkins**
+<img width="1624" height="1061" alt="Captura de pantalla 2026-04-17 a la(s) 2 38 37 p  m" src="https://github.com/user-attachments/assets/b53a0a38-0363-430d-8b5e-9e9e234a9b6d" />
 
 
 ### Para ver los logs de un contenedor
